@@ -1,7 +1,9 @@
-package com.example.administrator.weiying;
+package com.example.administrator.weiying.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.administrator.weiying.R;
 
 public class MainActivity extends AppCompatActivity {
 
