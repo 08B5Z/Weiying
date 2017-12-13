@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -36,4 +36,10 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile 'com.hjm:BottomTabBar:1.1.1'
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.github.leifzhang:IjkLib:0.4.3'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    compile files('libs/universal-image-loader-1.9.5.jar')
 }
