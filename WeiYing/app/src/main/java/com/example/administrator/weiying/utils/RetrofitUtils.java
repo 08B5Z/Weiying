@@ -29,7 +29,7 @@ public class RetrofitUtils {
     }
 
     private Retrofit retrofit;
-    public synchronized Retrofit getRetrofit(String url){
+    private synchronized Retrofit getRetrofit(String url){
         HttpLoggingInterceptor httpLoggingInterceptor=new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
