@@ -10,7 +10,7 @@ import com.example.administrator.weiying.view.HomePageView;
 
 public class HomePagePresenter {
     private HomePageView homePageView;
-    private final HomePageModel homePageModel;
+    private HomePageModel homePageModel;
 
     public HomePagePresenter(HomePageView homePageView) {
         this.homePageView = homePageView;
