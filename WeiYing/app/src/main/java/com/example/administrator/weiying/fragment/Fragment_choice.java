@@ -16,6 +16,7 @@ import android.widget.EditText;
 import com.example.administrator.weiying.R;
 import com.example.administrator.weiying.activity.DetailActivity;
 import com.example.administrator.weiying.activity.FrescoImageLoader;
+import com.example.administrator.weiying.activity.SearchActivity;
 import com.example.administrator.weiying.adapter.ListAdapter;
 import com.example.administrator.weiying.model.bean.ShouYeBean;
 import com.example.administrator.weiying.presenter.HomePagePresenter;
@@ -61,6 +62,13 @@ public class Fragment_choice extends Fragment implements HomePageView{
         mRv = (RecyclerView) view.findViewById(R.id.rv);
         mRv.setLayoutManager(new LinearLayoutManager(getContext()));
         mRv.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
+        mFind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

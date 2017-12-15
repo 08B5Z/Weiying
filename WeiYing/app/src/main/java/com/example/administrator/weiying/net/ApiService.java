@@ -2,6 +2,7 @@ package com.example.administrator.weiying.net;
 
 import com.example.administrator.weiying.model.bean.CommentaryBean;
 import com.example.administrator.weiying.model.bean.DetailBean;
+import com.example.administrator.weiying.model.bean.SearchBean;
 import com.example.administrator.weiying.model.bean.ShouYeBean;
 
 import io.reactivex.Flowable;
@@ -33,4 +34,12 @@ public interface ApiService {
      */
     @GET("front/Commentary/getCommentList.do")
     Flowable<CommentaryBean> getCommentary(@Query("mediaId")String mediaId);
+
+    /**
+     *
+     * @param keyword
+     * @return
+     */
+    @GET("front/searchKeyWordApi/getVideoListByKeyWord.do")
+    Flowable<SearchBean> getSearch(@Query("keyword")String keyword);
 }

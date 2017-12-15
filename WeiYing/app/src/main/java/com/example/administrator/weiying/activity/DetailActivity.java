@@ -126,4 +126,10 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
             return names.length;
         }
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+    }
 }
