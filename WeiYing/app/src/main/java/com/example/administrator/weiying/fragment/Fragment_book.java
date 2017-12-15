@@ -54,7 +54,7 @@ public class Fragment_book extends Fragment implements IClassifyView{
                 moreURL.setMoreURL(shouYeBean.getRet().getList().get(i).getMoreURL());
                 list1.add(moreURL) ;
                 childListBean.setPic(childListBean.getPic());
-                childListBean.setTitle(childListBean.getTitle());
+                 childListBean.setTitle(childListBean.getTitle());
                 list.add(childListBean);
             }
 

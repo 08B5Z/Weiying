@@ -5,6 +5,6 @@ package com.example.administrator.weiying.model;
  */
 
 public interface IClassifyModel2 {
-    void showmodel(ClassifyModel2.SendData sendData);
+    void showmodel2(ClassifyModel2.SendData2 sendData);
 
 }

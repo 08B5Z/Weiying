@@ -2,6 +2,7 @@ package com.example.administrator.weiying.model;
 
 import android.util.Log;
 
+import com.example.administrator.weiying.model.bean.ClassifyBean;
 import com.example.administrator.weiying.model.bean.ShouYeBean;
 import com.example.administrator.weiying.net.ApiService;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -20,13 +21,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ClassifyModel2 implements IClassifyModel2{
-    private String url  = "http://api.svipmovie.com/";
+    private String url  = "http://api.svipmovie.com";
     @Override
-    public void showmodel(final SendData sendData) {
+    public void showmodel2(final SendData2 sendData2) {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                Log.i("xxx", message);
+                Log.i("xxxx", message);
             }
         });
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -40,19 +41,20 @@ public class ClassifyModel2 implements IClassifyModel2{
                 .build();
 
         ApiService apiService = retrofit.create(ApiService.class);
-        Flowable<ShouYeBean> string = apiService.getString();
+        Flowable<ClassifyBean> string = apiService.getString2();
 
         string .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new DisposableSubscriber<ShouYeBean>() {
+                .subscribeWith(new DisposableSubscriber<ClassifyBean>() {
                     @Override
-                    public void onNext(ShouYeBean shouYeBean) {
-                        sendData.senddata(shouYeBean);
+                    public void onNext(ClassifyBean classifyBean) {
+                        Log.i("xxxx", "sucess"+classifyBean.toString());
+                        sendData2.senddata2(classifyBean);
                     }
 
                     @Override
                     public void onError(Throwable t) {
-
+                        Log.i("xxxx", "sb"+t.toString());
                     }
 
                     @Override
@@ -62,7 +64,7 @@ public class ClassifyModel2 implements IClassifyModel2{
                 });
     }
 
-    public interface SendData{
-        void senddata(ShouYeBean shouYeBean);
+    public interface SendData2{
+        void senddata2(ClassifyBean classifyBean);
     }
 }

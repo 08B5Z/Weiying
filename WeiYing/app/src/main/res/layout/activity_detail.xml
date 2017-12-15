@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@mipmap/bg_colorful"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.weiying.activity.DetailActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:background="#b7b21a"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/collection"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    </RelativeLayout>
+
+    <tv.danmaku.ijk.media.widget.media.IjkVideoView
+        android:id="@+id/ivv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"></tv.danmaku.ijk.media.widget.media.IjkVideoView>
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:layout_gravity="center"
+        android:id="@+id/tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

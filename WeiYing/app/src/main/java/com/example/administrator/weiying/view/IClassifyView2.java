@@ -1,5 +1,6 @@
 package com.example.administrator.weiying.view;
 
+import com.example.administrator.weiying.model.bean.ClassifyBean;
 import com.example.administrator.weiying.model.bean.ShouYeBean;
 
 /**
@@ -7,5 +8,5 @@ import com.example.administrator.weiying.model.bean.ShouYeBean;
  */
 
 public interface IClassifyView2 {
-    void showClassify(ShouYeBean shouYeBean);
+    void showClassify2(ClassifyBean classifyBean);
 }
