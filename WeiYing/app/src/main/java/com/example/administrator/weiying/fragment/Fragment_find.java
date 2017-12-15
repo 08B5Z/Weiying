@@ -91,12 +91,14 @@ public class Fragment_find extends Fragment implements IRecyView{
 
         mMrv.setAdapter(mAdapter);
     }
+
     private int getNextPage() {
 
         page = getRandomNumber(1, 108);
 
         return page;
     }
+
     public static int getRandomNumber(int min, int max) {
         return new Random().nextInt(max) % (max - min + 1) + min;
     }
