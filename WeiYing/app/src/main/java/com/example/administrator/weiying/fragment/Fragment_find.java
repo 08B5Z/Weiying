@@ -48,7 +48,6 @@ public class Fragment_find extends Fragment implements IRecyView{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment03, container, false);
         change=view.findViewById(R.id.change);
-        tvchange=view.findViewById(R.id.tv_change);
         page=1;
         String pnumm=String.valueOf(page);
         presenter=new RecyPresenter(Fragment_find.this);

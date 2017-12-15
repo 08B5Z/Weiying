@@ -6,14 +6,12 @@
     android:background="@mipmap/bg_colorful"
     >
     <TextView
-        android:id="@+id/tv_change"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="发现"
         android:textColor="#fff"
         android:background="#f44336"
         android:gravity="center"/>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mrv"
         android:layout_width="match_parent"
