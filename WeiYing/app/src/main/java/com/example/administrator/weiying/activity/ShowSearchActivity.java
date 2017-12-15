@@ -39,6 +39,7 @@ public class ShowSearchActivity extends AppCompatActivity implements SearchView{
                 finish();
             }
         });
+
         SearchPresenter searchPresenter = new SearchPresenter(this);
         searchPresenter.getFindPresneter();
     }

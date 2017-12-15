@@ -15,22 +15,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity">
+        </activity>
+        <activity android:name=".activity.DetailActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.ShowSearchActivity" />
+        <activity android:name=".activity.ClassifyActivity" />
+        <activity android:name=".activity.DetailActivity" />
+        <activity android:name=".activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".activity.DetailActivity" />
-        <activity android:name=".activity.SearchActivity" />
-        <activity android:name=".activity.ShowSearchActivity"></activity>
-=======
-
-        <activity android:name=".activity.ClassifyActivity"/>
-
-        <activity android:name=".activity.DetailActivity"></activity>
->>>>>>> f1b5ca579e3c4bb86efbb1688c099f861e12f557
     </application>
 
 </manifest>
