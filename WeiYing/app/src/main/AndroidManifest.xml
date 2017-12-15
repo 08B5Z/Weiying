@@ -28,6 +28,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+=======
+        <activity android:name=".activity.DetailActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.ShowSearchActivity"></activity>
+
+        <activity android:name=".activity.ClassifyActivity"/>
+
+        <activity android:name=".activity.DetailActivity"></activity>
+>>>>>>> b6216f327f8fbea4e292f29eb46558fa091f4b73
     </application>
 
 </manifest>
