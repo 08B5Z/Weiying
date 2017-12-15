@@ -1,5 +1,13 @@
 package com.example.administrator.weiying.net;
 
+import android.database.Observable;
+
+import com.example.administrator.weiying.model.bean.ClassifyBean;
+import com.example.administrator.weiying.model.bean.ShouYeBean;
+
+
+import io.reactivex.Flowable;
+import retrofit2.http.GET;
 import com.example.administrator.weiying.model.bean.CommentaryBean;
 import com.example.administrator.weiying.model.bean.DetailBean;
 import com.example.administrator.weiying.model.bean.SearchBean;
@@ -14,6 +22,13 @@ import retrofit2.http.Query;
  */
 
 public interface ApiService {
+
+
+    @GET("front/homePageApi/homePage.do")
+    Flowable<ShouYeBean> getString();
+
+    @GET("front/columns/getVideoList.do?catalogId=402834815584e463015584e538140009")
+    Flowable<ClassifyBean> getString2();
 
 
     @GET("front/homePageApi/homePage.do")
@@ -35,6 +50,7 @@ public interface ApiService {
     @GET("front/Commentary/getCommentList.do")
     Flowable<CommentaryBean> getCommentary(@Query("mediaId")String mediaId);
 
+<<<<<<< HEAD
     /**
      *
      * @param keyword
@@ -42,4 +58,6 @@ public interface ApiService {
      */
     @GET("front/searchKeyWordApi/getVideoListByKeyWord.do")
     Flowable<SearchBean> getSearch(@Query("keyword")String keyword);
+=======
+>>>>>>> f1b5ca579e3c4bb86efbb1688c099f861e12f557
 }
