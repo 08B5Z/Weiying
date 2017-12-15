@@ -87,6 +87,8 @@ public class Fragment_find extends Fragment implements IRecyView{
         ItemTouchHelper.Callback callback = new RenRenCallback(mMrv, mAdapter,list);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(mMrv);
+        CardConfig.MAX_SHOW_COUNT = 3;
+
         mMrv.setAdapter(mAdapter);
     }
     private int getNextPage() {
