@@ -42,4 +42,7 @@ dependencies {
     compile 'com.facebook.fresco:fresco:0.12.0'
     compile 'com.facebook.fresco:animated-gif:0.12.0'
     compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.github.mcxtzhang:ZLayoutManager:V1.1.0'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }
