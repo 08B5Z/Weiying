@@ -1,5 +1,6 @@
 package com.example.administrator.weiying.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -86,15 +87,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.user_iv:
                break;
             case R.id.shouc:
-
+                Toast.makeText(this, "敬请期待！", Toast.LENGTH_SHORT).show();
                break;
             case R.id.down:
                 Toast.makeText(this, "敬请期待！", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.fuli:
-
+                Intent intent = new Intent(MainActivity.this,GankActivity.class);
+                startActivity(intent);
                 break;
             case R.id.sharee:
+                Toast.makeText(this, "敬请期待！", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.fank:
                 break;

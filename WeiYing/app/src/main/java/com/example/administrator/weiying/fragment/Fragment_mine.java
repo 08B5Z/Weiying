@@ -53,6 +53,7 @@ public class Fragment_mine extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), "敬请期待！", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.shoucang:
+
                 break;
             case R.id.zhuti:
                 break;

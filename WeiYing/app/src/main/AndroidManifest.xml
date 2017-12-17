@@ -23,11 +23,9 @@
         </activity>
         <activity android:name=".activity.DetailActivity" />
         <activity android:name=".activity.SearchActivity" />
-        <activity android:name=".activity.ShowSearchActivity"></activity>
-
-        <activity android:name=".activity.ClassifyActivity"/>
-
-        <activity android:name=".activity.DetailActivity"></activity>
+        <activity android:name=".activity.ShowSearchActivity" />
+        <activity android:name=".activity.ClassifyActivity" />
+        <activity android:name=".activity.GankActivity"></activity>
     </application>
 
 </manifest>

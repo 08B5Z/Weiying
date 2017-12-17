@@ -16,4 +16,5 @@ public class Api {
     public static final String SEARCH = HOST;
     //评论列表：http://api.svipmovie.com/front/Commentary/getCommentList.do?mediaId=CMCC_00000000000000001_621653189
     public static final String COMMENT = HOST;
+    public static final String GANK = "http://gank.io/api/";
 }

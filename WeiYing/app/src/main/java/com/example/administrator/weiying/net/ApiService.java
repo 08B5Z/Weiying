@@ -3,11 +3,13 @@ package com.example.administrator.weiying.net;
 import com.example.administrator.weiying.model.bean.ClassifyBean;
 import com.example.administrator.weiying.model.bean.CommentaryBean;
 import com.example.administrator.weiying.model.bean.DetailBean;
+import com.example.administrator.weiying.model.bean.GankBean;
 import com.example.administrator.weiying.model.bean.SearchBean;
 import com.example.administrator.weiying.model.bean.ShouYeBean;
 
 import io.reactivex.Flowable;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -50,4 +52,9 @@ public interface ApiService {
      */
     @GET("front/searchKeyWordApi/getVideoListByKeyWord.do")
     Flowable<SearchBean> getSearch(@Query("keyword")String keyword);
+    /**
+     * 福利列表
+     */
+    @GET("data/福利/{num}/{page}")
+    Flowable<GankBean> getGank(@Path("num") int num, @Path("page") int page);
 }
