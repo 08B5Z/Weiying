@@ -4,20 +4,24 @@ import com.example.administrator.weiying.model.bean.ClassifyBean;
 import com.example.administrator.weiying.model.bean.CommentaryBean;
 import com.example.administrator.weiying.model.bean.DetailBean;
 import com.example.administrator.weiying.model.bean.GankBean;
+import com.example.administrator.weiying.model.bean.NewsBean;
 import com.example.administrator.weiying.model.bean.SearchBean;
 import com.example.administrator.weiying.model.bean.ShouYeBean;
 
 import io.reactivex.Flowable;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
+
 
 /**
  * Created by Administrator on 2017/12/13.
  */
 
 public interface ApiService {
-
 
     @GET("front/homePageApi/homePage.do")
     Flowable<ShouYeBean> getString();
@@ -28,6 +32,12 @@ public interface ApiService {
 
     @GET("front/homePageApi/homePage.do")
     Flowable<ShouYeBean> getHomePage();
+
+    //发现
+    @POST("front/columns/getVideoList.do")
+    @FormUrlEncoded
+    Flowable<NewsBean> getList(@Field("catalogId")String catalogId, @Field("pnum")String pnum);
+
 
     /**
      *
@@ -57,4 +67,5 @@ public interface ApiService {
      */
     @GET("data/福利/{num}/{page}")
     Flowable<GankBean> getGank(@Path("num") int num, @Path("page") int page);
+
 }

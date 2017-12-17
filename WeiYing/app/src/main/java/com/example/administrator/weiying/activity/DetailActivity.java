@@ -132,4 +132,10 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
         super.onStop();
         finish();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        IjkMediaPlayer.native_profileEnd();
+    }
 }
